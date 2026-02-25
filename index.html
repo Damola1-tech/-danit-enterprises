@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DANNIT ENTERPRISES — CAC Business Registration</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Outfit:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--gd:#0D3320;--gm:#1A6B35;--gb:#22883F;--gl:#2EAD52;--gp:#E8F5EC;--gg:#F2FAF4;--gold:#C9972A;--goldl:#E8B84B;--w:#FDFEFE;--g1:#F4F7F5;--g2:#E2EAE5;--g4:#8FA99A;--g6:#4A6356;--tx:#0D2318}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;background:var(--w);color:var(--tx);overflow-x:hidden}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 4rem;background:rgba(13,51,32,0.97);backdrop-filter:blur(16px);border-bottom:1px solid rgba(46,173,82,0.15)}
+.logo{display:flex;align-items:center;gap:.75rem;font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:700;color:var(--w);letter-spacing:.06em}
+.logo-seal{width:36px;height:36px;background:var(--gb);border:2px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.72rem;color:var(--w);font-weight:700;font-family:'DM Mono',monospace;flex-shrink:0}
+.logo span{color:var(--goldl)}
+.nav-links{display:flex;gap:2.5rem;list-style:none}
+.nav-links a{color:rgba(255,255,255,.6);text-decoration:none;font-size:.85rem;font-weight:400;transition:color .2s}
+.nav-links a:hover{color:var(--goldl)}
+.nav-cta{background:var(--gb);color:var(--w);border:none;padding:.65rem 1.4rem;font-family:'Outfit',sans-serif;font-size:.82rem;font-weight:600;cursor:pointer;letter-spacing:.04em;border-radius:2px;transition:background .2s}
+.nav-cta:hover{background:var(--gl)}
+/* HERO */
+.hero{min-height:100vh;background:var(--gd);display:grid;grid-template-columns:1.1fr .9fr;align-items:center;padding:9rem 4rem 5rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(46,173,82,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(46,173,82,.04) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
+.hg{position:absolute;top:-120px;right:-80px;width:600px;height:600px;background:radial-gradient(circle,rgba(34,136,63,.22) 0%,transparent 65%);pointer-events:none}
+.hg2{position:absolute;bottom:-200px;left:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(201,151,42,.07) 0%,transparent 65%);pointer-events:none}
+.eyebrow{display:inline-flex;align-items:center;gap:.6rem;background:rgba(46,173,82,.12);border:1px solid rgba(46,173,82,.3);color:#6FCF85;padding:.4rem 1rem;font-size:.72rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;margin-bottom:1.8rem;animation:fadeUp .5s ease both}
+.edot{width:6px;height:6px;background:var(--gl);border-radius:50%;box-shadow:0 0 8px var(--gl);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(46,173,82,.5)}70%{box-shadow:0 0 0 8px rgba(46,173,82,0)}100%{box-shadow:0 0 0 0 rgba(46,173,82,0)}}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,5.5vw,4.8rem);font-weight:700;line-height:1.08;color:var(--w);margin-bottom:1.4rem;animation:fadeUp .5s .1s ease both}
+.hero h1 em{font-style:italic;color:var(--goldl);display:block}
+.hero-sub{color:rgba(255,255,255,.55);font-size:1rem;line-height:1.75;max-width:460px;margin-bottom:2.5rem;font-weight:300;animation:fadeUp .5s .2s ease both}
+.hact{display:flex;gap:1rem;align-items:center;animation:fadeUp .5s .3s ease both}
+.bp{background:var(--gb);color:var(--w);border:none;padding:1rem 2rem;border-radius:2px;font-family:'Outfit',sans-serif;font-size:.9rem;font-weight:600;cursor:pointer;letter-spacing:.04em;transition:all .2s}
+.bp:hover{background:var(--gl);transform:translateY(-2px);box-shadow:0 10px 28px rgba(34,136,63,.35)}
+.bo{background:transparent;color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.2);padding:1rem 1.75rem;border-radius:2px;font-family:'Outfit',sans-serif;font-size:.9rem;cursor:pointer;transition:all .2s}
+.bo:hover{border-color:var(--goldl);color:var(--goldl)}
+.hr2{display:flex;justify-content:flex-end;align-items:center;animation:fadeLeft .7s .2s ease both}
+.ic{background:rgba(255,255,255,.04);border:1px solid rgba(46,173,82,.2);width:100%;max-width:400px;position:relative}
+.ic::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gb),var(--gold))}
+.ich{padding:1.5rem 1.75rem;border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center;justify-content:space-between}
+.icht{font-family:'DM Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.4)}
+.ichb{background:rgba(46,173,82,.15);border:1px solid rgba(46,173,82,.3);color:#6FCF85;font-size:.68rem;font-family:'DM Mono',monospace;padding:.2rem .6rem}
+.sr{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid rgba(255,255,255,.06)}
+.sc{padding:1.4rem 1.75rem;border-right:1px solid rgba(255,255,255,.06)}
+.sc:nth-child(2),.sc:nth-child(4){border-right:none}
+.sc:nth-child(3),.sc:nth-child(4){border-top:1px solid rgba(255,255,255,.06)}
+.sn{font-family:'DM Mono',monospace;font-size:1.8rem;color:var(--goldl);line-height:1;margin-bottom:.3rem}
+.sl{color:rgba(255,255,255,.35);font-size:.7rem;text-transform:uppercase;letter-spacing:.07em}
+.svrows{padding:1rem 1.75rem}
+.svrow{display:flex;align-items:center;justify-content:space-between;padding:.75rem 0;border-bottom:1px solid rgba(255,255,255,.05)}
+.svrow:last-child{border-bottom:none}
+.svrl{display:flex;align-items:center;gap:.75rem}
+.svrd{width:7px;height:7px;background:var(--gl);border-radius:50%;box-shadow:0 0 6px var(--gl)}
+.svrn{color:rgba(255,255,255,.7);font-size:.82rem}
+.svrt{font-family:'DM Mono',monospace;font-size:.65rem;background:rgba(46,173,82,.1);color:#6FCF85;padding:.15rem .5rem;border:1px solid rgba(46,173,82,.2)}
+/* SECTIONS */
+.sec-label{font-family:'DM Mono',monospace;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gm);margin-bottom:.9rem}
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,2.9rem);font-weight:700;line-height:1.15;color:var(--gd);margin-bottom:.9rem}
+.sec-sub{color:var(--g4);font-size:.97rem;line-height:1.75;max-width:480px;font-weight:300;margin-bottom:3.5rem}
+/* SERVICES */
+.services{padding:7rem 4rem;background:var(--w)}
+.svcg{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--g2);border-right:none;border-bottom:none}
+.svcc{padding:2.25rem;border-right:1px solid var(--g2);border-bottom:1px solid var(--g2);position:relative;overflow:hidden;cursor:pointer;transition:all .28s;background:var(--w)}
+.svcc::after{content:'';position:absolute;top:0;left:0;bottom:0;width:3px;background:var(--gb);transform:scaleY(0);transform-origin:top;transition:transform .28s}
+.svcc:hover{background:var(--gg)}.svcc:hover::after{transform:scaleY(1)}.svcc:hover .sarr{color:var(--gb);transform:translateX(5px)}
+.svi{font-size:1.6rem;margin-bottom:1.25rem}
+.svn{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--gd);margin-bottom:.65rem;line-height:1.3}
+.svd{color:var(--g4);font-size:.84rem;line-height:1.65;margin-bottom:1.5rem;font-weight:300}
+.svf{display:flex;align-items:center;justify-content:space-between}
+.svtg{font-family:'DM Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;color:var(--gm);background:var(--gp);padding:.25rem .65rem}
+.sarr{font-size:1rem;color:var(--g2);transition:all .28s}
+/* PROCESS */
+.process{padding:7rem 4rem;background:var(--gd);position:relative;overflow:hidden}
+.process::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(46,173,82,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(46,173,82,.03) 1px,transparent 1px);background-size:56px 56px;pointer-events:none}
+.process .sec-label{color:#6FCF85}.process .sec-title{color:var(--w)}.process .sec-sub{color:rgba(255,255,255,.45)}
+.stw{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(46,173,82,.1);margin-top:3rem}
+.stb{background:var(--gd);padding:2.25rem 1.75rem;transition:background .2s}.stb:hover{background:rgba(46,173,82,.06)}
+.stnum{font-family:'DM Mono',monospace;font-size:.7rem;color:var(--gl);letter-spacing:.1em;margin-bottom:1.5rem;display:block}
+.sti{font-size:1.5rem;margin-bottom:1rem}
+.stt{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--w);margin-bottom:.6rem}
+.sttx{color:rgba(255,255,255,.4);font-size:.83rem;line-height:1.65;font-weight:300}
+/* REGISTER */
+.register{padding:7rem 4rem;background:var(--g1)}
+.regw{display:grid;grid-template-columns:1fr 1.5fr;gap:5rem;max-width:1100px;margin:0 auto;align-items:start}
+.wab{margin-top:2rem;background:var(--w);border:1px solid var(--g2);padding:1.25rem 1.5rem;border-left:3px solid #25D366}
+.wal{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:#25D366;font-weight:600;font-family:'DM Mono',monospace;margin-bottom:.5rem}
+.watx{font-size:.84rem;color:var(--g6);line-height:1.6;font-weight:300}
+.ck{margin-top:2rem;list-style:none}
+.ck li{display:flex;align-items:flex-start;gap:.75rem;padding:.75rem 0;border-bottom:1px solid var(--g2);font-size:.85rem;color:var(--g6);line-height:1.5;font-weight:300}
+.ck li::before{content:'✓';color:var(--gb);font-weight:700;flex-shrink:0;margin-top:1px}
+/* FORM CARD */
+.fcard{background:var(--w);border:1px solid var(--g2);box-shadow:0 4px 24px rgba(13,51,32,.06);position:relative}
+.fcard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gb),var(--gold))}
+/* TYPE SELECTOR */
+.type-selector{padding:2rem 2rem 0}
+.type-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;color:var(--gd);font-weight:600;margin-bottom:.6rem;display:block}
+.type-select{width:100%;padding:.9rem 1rem;border:2px solid var(--gb);background:var(--gp);color:var(--gd);font-family:'Outfit',sans-serif;font-size:.95rem;font-weight:600;outline:none;border-radius:2px;cursor:pointer;transition:all .2s}
+.type-select:focus{box-shadow:0 0 0 3px rgba(34,136,63,.15)}
+.type-hint{font-size:.75rem;color:var(--gm);margin-top:.4rem;font-weight:400;font-style:italic}
+/* STEP TABS */
+.tnav{display:flex;border-bottom:1px solid var(--g2);background:var(--g1);overflow-x:auto}
+.tbtn{flex:1;min-width:90px;padding:.9rem .5rem;text-align:center;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;color:var(--g4);font-weight:500;font-family:'Outfit',sans-serif;background:transparent;border:none;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .2s;display:flex;flex-direction:column;align-items:center;gap:.3rem;white-space:nowrap}
+.tbtn.active{color:var(--gm);border-bottom-color:var(--gb);background:var(--w)}
+.tnum{width:20px;height:20px;border-radius:50%;background:var(--g2);color:var(--g4);font-family:'DM Mono',monospace;font-size:.62rem;display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0}
+.tbtn.active .tnum{background:var(--gb);color:white}.tbtn.done .tnum{background:var(--gm);color:white}
+/* FORM BODY */
+.fbody{padding:1.75rem 2rem}
+.fpanel{display:none;animation:fadeUp .25s ease}.fpanel.active{display:block}
+/* DYNAMIC FORM SECTIONS */
+.dyn-section{display:none}.dyn-section.show{display:block}
+/* FIELDS */
+.fg{margin-bottom:1.15rem}
+.fg label{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;color:var(--gd);font-weight:600;margin-bottom:.4rem}
+.fg input,.fg select,.fg textarea{width:100%;padding:.8rem 1rem;border:1px solid var(--g2);background:var(--w);color:var(--tx);font-family:'Outfit',sans-serif;font-size:.88rem;outline:none;transition:border-color .2s,box-shadow .2s;border-radius:2px}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--gb);box-shadow:0 0 0 3px rgba(34,136,63,.08)}
+.fg textarea{resize:vertical;min-height:75px}
+.fgh{font-size:.73rem;color:var(--g4);margin-top:.3rem;font-weight:300}
+.fgr{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.fgr3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem}
+/* SECTION DIVIDERS */
+.fsec{margin:1.5rem 0 1rem;padding:.6rem 1rem;background:var(--gp);border-left:3px solid var(--gb);font-size:.72rem;font-weight:700;color:var(--gm);text-transform:uppercase;letter-spacing:.07em;font-family:'DM Mono',monospace}
+/* PERSON BLOCK (repeatable) */
+.person-block{border:1px solid var(--g2);padding:1.25rem;margin-bottom:1rem;position:relative;background:var(--gg)}
+.person-block-title{font-size:.72rem;font-weight:700;color:var(--gm);text-transform:uppercase;letter-spacing:.07em;font-family:'DM Mono',monospace;margin-bottom:1rem;display:flex;align-items:center;justify-content:space-between}
+/* DOCUMENT NOTICE */
+.dn{background:var(--gg);border:1px solid rgba(34,136,63,.2);padding:1.25rem 1.5rem;border-left:3px solid var(--gb);margin-bottom:1.5rem}
+.dnt{font-size:.8rem;font-weight:600;color:var(--gd);margin-bottom:.5rem;text-transform:uppercase;letter-spacing:.05em}
+.dn p{font-size:.83rem;color:var(--g6);line-height:1.6;font-weight:300}
+.dl{margin-top:.75rem;list-style:none}
+.dl li{font-size:.82rem;color:var(--g6);padding:.35rem 0;display:flex;align-items:flex-start;gap:.6rem;border-bottom:1px dashed var(--g2);font-weight:300}
+.dl li:last-child{border-bottom:none}.dl li::before{content:'📄';font-size:.8rem;flex-shrink:0;margin-top:1px}
+/* SUMMARY */
+.summary-box{background:var(--g1);border:1px solid var(--g2);padding:1.25rem;margin-bottom:1.25rem}
+.summary-box-title{font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;color:var(--gm);font-weight:600;margin-bottom:.75rem;font-family:'DM Mono',monospace}
+/* TERMS */
+.trow{display:flex;align-items:flex-start;gap:.75rem;margin-top:1.25rem;padding:1rem;background:var(--g1);border:1px solid var(--g2)}
+.trow input[type=checkbox]{width:auto;margin-top:3px;accent-color:var(--gb);flex-shrink:0}
+.trow label{font-size:.8rem;color:var(--g6);text-transform:none;letter-spacing:0;font-weight:300;line-height:1.5;cursor:pointer}
+/* FORM FOOTER */
+.ffoot{padding:1.2rem 2rem;border-top:1px solid var(--g1);display:flex;align-items:center;justify-content:space-between;background:var(--g1)}
+.fpl{font-family:'DM Mono',monospace;font-size:.72rem;color:var(--g4);margin-bottom:.4rem}
+.fpdots{display:flex;gap:.4rem}
+.pp{width:28px;height:3px;background:var(--g2);border-radius:2px;transition:background .3s}
+.pp.active{background:var(--gb)}.pp.done{background:var(--gm)}
+.bbk{background:transparent;color:var(--g4);border:1px solid var(--g2);padding:.8rem 1.4rem;font-family:'Outfit',sans-serif;font-size:.82rem;cursor:pointer;transition:all .2s;border-radius:2px}
+.bbk:hover{border-color:var(--gm);color:var(--gm)}
+.bnx{background:var(--gd);color:var(--w);border:none;padding:.8rem 1.8rem;border-radius:2px;font-family:'Outfit',sans-serif;font-size:.85rem;font-weight:600;cursor:pointer;letter-spacing:.04em;transition:all .2s}
+.bnx:hover{background:var(--gm)}
+.bsb{background:var(--gb);color:var(--w);border:none;padding:.8rem 1.8rem;border-radius:2px;font-family:'Outfit',sans-serif;font-size:.85rem;font-weight:700;cursor:pointer;letter-spacing:.04em;display:none;transition:all .2s}
+.bsb:hover{background:var(--gl)}
+/* TRUST */
+.trust{padding:5.5rem 4rem;background:var(--w);border-top:1px solid var(--g2)}
+.trgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-top:3.5rem}
+.trc{padding:1.75rem 1.25rem;border:1px solid var(--g2);transition:border-color .2s,box-shadow .2s;text-align:center}
+.trc:hover{border-color:var(--gb);box-shadow:0 4px 16px rgba(34,136,63,.08)}
+.tri{font-size:1.6rem;margin-bottom:.75rem}
+.trt{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:var(--gd);margin-bottom:.35rem}
+.trd{font-size:.8rem;color:var(--g4);font-weight:300;line-height:1.5}
+/* FOOTER */
+footer{background:var(--gd);padding:2.5rem 4rem;display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(46,173,82,.15)}
+.fb{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--w);letter-spacing:.05em}
+.fb span{color:var(--goldl)}
+.fc{color:rgba(255,255,255,.3);font-size:.78rem}
+.fl{display:flex;gap:2rem}
+.fl a{color:rgba(255,255,255,.35);text-decoration:none;font-size:.78rem;transition:color .2s}
+.fl a:hover{color:var(--goldl)}
+/* MODAL */
+.ov{display:none;position:fixed;inset:0;z-index:300;background:rgba(13,51,32,.88);backdrop-filter:blur(6px);align-items:center;justify-content:center}
+.ov.open{display:flex}
+.modal{background:var(--w);max-width:500px;width:92%;padding:3rem 2.5rem;text-align:center;position:relative;animation:fadeUp .35s ease;border-radius:2px}
+.modal::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gb),var(--gold))}
+.mseal{width:64px;height:64px;background:var(--gp);border:2px solid var(--gb);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 1.25rem}
+.mtit{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:700;color:var(--gd);margin-bottom:.75rem}
+.mtx{color:var(--g4);font-size:.88rem;line-height:1.7;margin-bottom:1.5rem;font-weight:300}
+.mref{background:var(--gp);border:1px solid rgba(34,136,63,.2);padding:.75rem 1.5rem;display:inline-block;font-family:'DM Mono',monospace;font-size:.9rem;color:var(--gm);margin-bottom:1rem;letter-spacing:.04em}
+.mwa{background:#25D36615;border:1px solid #25D36640;padding:.85rem 1.25rem;margin-bottom:1.25rem;font-size:.83rem;color:var(--g6);line-height:1.6}
+.mwa strong{color:#128C7E}
+.mcl{background:var(--gb);color:var(--w);border:none;padding:.9rem 2.5rem;border-radius:2px;font-family:'Outfit',sans-serif;font-size:.9rem;font-weight:600;cursor:pointer;transition:background .2s}
+.mcl:hover{background:var(--gl)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeLeft{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:translateX(0)}}
+@media(max-width:960px){
+  nav{padding:1rem 1.5rem}.nav-links{display:none}
+  .hero{grid-template-columns:1fr;padding:7rem 1.5rem 3rem}.hr2{display:none}
+  .services,.process,.register,.trust{padding:4rem 1.5rem}
+  .svcg{grid-template-columns:1fr}.stw{grid-template-columns:1fr 1fr}
+  .regw{grid-template-columns:1fr;gap:2rem}.trgrid{grid-template-columns:1fr 1fr}
+  footer{flex-direction:column;gap:1.25rem;padding:2rem 1.5rem;text-align:center}
+  .fgr,.fgr3{grid-template-columns:1fr}
+  #contact > div > div{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo"><div class="logo-seal">DE</div>DANNIT<span>.</span></div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#process">How It Works</a></li>
+    <li><a href="#register">Register</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-cta" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})">Start Registration</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hg"></div><div class="hg2"></div>
+  <div>
+    <div class="eyebrow"><span class="edot"></span> CAC Accredited — Nigeria</div>
+    <h1>Register Your<br><em>Business Officially</em><br>With Confidence.</h1>
+    <p class="hero-sub">Fast, accurate, and professionally handled CAC registration for entrepreneurs, NGOs, churches, and organizations across Nigeria. We file — you grow.</p>
+    <div class="hact">
+      <button class="bp" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})">Start Registration →</button>
+      <button class="bo" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">See Services</button>
+    </div>
+  </div>
+  <div class="hr2">
+    <div class="ic">
+      <div class="ich"><span class="icht">DANNIT ENTERPRISES</span><span class="ichb">● OPEN</span></div>
+      <div class="sr">
+        <div class="sc"><div class="sn">500+</div><div class="sl">Registered</div></div>
+        <div class="sc"><div class="sn">48h</div><div class="sl">Avg. Turnaround</div></div>
+        <div class="sc"><div class="sn">5★</div><div class="sl">Rating</div></div>
+        <div class="sc"><div class="sn">100%</div><div class="sl">Success Rate</div></div>
+      </div>
+      <div class="svrows">
+        <div class="svrow"><div class="svrl"><div class="svrd"></div><span class="svrn">Business Name Registration</span></div><span class="svrt">ACTIVE</span></div>
+        <div class="svrow"><div class="svrl"><div class="svrd"></div><span class="svrn">Limited Liability Company</span></div><span class="svrt">ACTIVE</span></div>
+        <div class="svrow"><div class="svrl"><div class="svrd"></div><span class="svrn">NGO / Incorporated Trustees</span></div><span class="svrt">ACTIVE</span></div>
+        <div class="svrow"><div class="svrl"><div class="svrd"></div><span class="svrn">Partnership Registration</span></div><span class="svrt">ACTIVE</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="sec-label">// Our Services</div>
+  <h2 class="sec-title">Everything You Need<br>To Be Official</h2>
+  <p class="sec-sub">From sole traders to nonprofits, we handle all categories of CAC registration with speed and accuracy.</p>
+  <div class="svcg">
+    <div class="svcc" onclick="selectTypeAndScroll('bn')"><div class="svi">🏪</div><div class="svn">Business Name Registration</div><p class="svd">Register your sole proprietorship or trading name. Perfect for individual entrepreneurs ready to go official.</p><div class="svf"><span class="svtg">Sole Proprietorship</span><span class="sarr">→</span></div></div>
+    <div class="svcc" onclick="selectTypeAndScroll('llc')"><div class="svi">🏢</div><div class="svn">Limited Liability Company (LLC)</div><p class="svd">Incorporate your company with full legal protection. Ideal for businesses seeking investment, contracts, and credibility.</p><div class="svf"><span class="svtg">Private Company</span><span class="sarr">→</span></div></div>
+    <div class="svcc" onclick="selectTypeAndScroll('partnership')"><div class="svi">🤝</div><div class="svn">Partnership Registration</div><p class="svd">Register your business partnership with legally binding CAC documentation between two or more individuals.</p><div class="svf"><span class="svtg">Partnership</span><span class="sarr">→</span></div></div>
+    <div class="svcc" onclick="selectTypeAndScroll('ngo')"><div class="svi">⛪</div><div class="svn">Incorporated Trustees</div><p class="svd">Register your NGO, charity, church, mosque, or association under the CAC Incorporated Trustees framework.</p><div class="svf"><span class="svtg">NGO / Church / Assoc.</span><span class="sarr">→</span></div></div>
+    <div class="svcc" onclick="selectTypeAndScroll('compliance')"><div class="svi">📋</div><div class="svn">Post-Registration Compliance</div><p class="svd">Annual returns, director changes, name amendments, address updates and other CAC compliance filings.</p><div class="svf"><span class="svtg">Compliance</span><span class="sarr">→</span></div></div>
+    <div class="svcc" onclick="selectTypeAndScroll('search')"><div class="svi">🔍</div><div class="svn">Business Name Search</div><p class="svd">Verify your desired business name is available before committing. We check up to 3 alternatives.</p><div class="svf"><span class="svtg">Name Search</span><span class="sarr">→</span></div></div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="process" id="process">
+  <div class="sec-label">// How It Works</div>
+  <h2 class="sec-title">From Application<br>to Certificate</h2>
+  <p class="sec-sub">A seamless 4-step process — no CAC portal stress, no confusion.</p>
+  <div class="stw">
+    <div class="stb"><span class="stnum">STEP 01</span><div class="sti">📝</div><div class="stt">Fill the Form</div><p class="sttx">Select your registration type and complete the relevant fields. Only fields relevant to your registration are shown.</p></div>
+    <div class="stb"><span class="stnum">STEP 02</span><div class="sti">📲</div><div class="stt">Send Documents</div><p class="sttx">After submission our team contacts you on WhatsApp to collect your ID, passport photo, and required documents.</p></div>
+    <div class="stb"><span class="stnum">STEP 03</span><div class="sti">⚡</div><div class="stt">We File With CAC</div><p class="sttx">We submit your registration on the CAC portal and handle all follow-ups and approvals on your behalf.</p></div>
+    <div class="stb"><span class="stnum">STEP 04</span><div class="sti">🎉</div><div class="stt">Receive Certificate</div><p class="sttx">Your CAC certificate is delivered digitally to your email. Your brand is now officially registered.</p></div>
+  </div>
+</section>
+
+<!-- REGISTER FORM -->
+<section class="register" id="register">
+  <div class="regw">
+    <div>
+      <div class="sec-label">// Apply Now</div>
+      <h2 class="sec-title">Begin Your<br>Registration</h2>
+      <p class="sec-sub">Select your registration type and the form will automatically show you exactly what we need.</p>
+      <div class="wab">
+        <div class="wal">📲 Document Collection</div>
+        <p class="watx">You <strong>do not</strong> upload documents here. After submitting, our team contacts you on WhatsApp to collect your ID, passport photo, and other documents securely.</p>
+      </div>
+      <ul class="ck">
+        <li>Select your registration type first — form changes automatically</li>
+        <li>Prepare 2–3 business name options (first choice may be taken)</li>
+        <li>All directors/proprietors/trustees need a valid government ID</li>
+        <li>You'll receive a unique reference number on submission</li>
+        <li>Certificate delivered digitally upon CAC approval</li>
+      </ul>
+    </div>
+
+    <div class="fcard">
+      <!-- TYPE SELECTOR — always visible -->
+      <div class="type-selector">
+        <label class="type-label">Select Registration Type *</label>
+        <select class="type-select" id="regType" onchange="onTypeChange(this.value)">
+          <option value="">— Choose registration type —</option>
+          <option value="bn">🏪 Business Name (Sole Proprietorship)</option>
+          <option value="llc">🏢 Limited Liability Company (LLC)</option>
+          <option value="partnership">🤝 Partnership Registration</option>
+          <option value="ngo">⛪ Incorporated Trustees (NGO / Church / Association)</option>
+          <option value="compliance">📋 Post-Registration Compliance</option>
+          <option value="search">🔍 Business Name Search Only</option>
+        </select>
+        <div class="type-hint" id="typeHint">Please select a type to begin filling the form</div>
+      </div>
+
+      <!-- STEP TABS -->
+      <div class="tnav" id="stepTabs" style="display:none;margin-top:1.5rem">
+        <button class="tbtn active" id="tab0"><span class="tnum">1</span><span id="tab0label">Business</span></button>
+        <button class="tbtn" id="tab1"><span class="tnum">2</span><span id="tab1label">Applicant</span></button>
+        <button class="tbtn" id="tab2"><span class="tnum">3</span><span id="tab2label">Confirm</span></button>
+      </div>
+
+      <div class="fbody" id="formBody" style="display:none">
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- STEP 1: BUSINESS DETAILS (dynamic per type) -->
+        <!-- ═══════════════════════════════════════════ -->
+        <div class="fpanel active" id="fp0">
+
+          <!-- ── BUSINESS NAME ── -->
+          <div class="dyn-section" id="sec-bn-biz">
+            <div class="fsec">🏪 Business Information</div>
+            <div class="fg"><label>Preferred Business Name — 1st Choice *</label><input type="text" id="bName1" placeholder="e.g. Dannit Global Services"><div class="fgh">Will be checked for availability at CAC first</div></div>
+            <div class="fgr">
+              <div class="fg"><label>2nd Choice Name</label><input type="text" id="bName2" placeholder="Alternative name"></div>
+              <div class="fg"><label>3rd Choice Name</label><input type="text" id="bName3" placeholder="Alternative name"></div>
+            </div>
+            <div class="fg"><label>Nature / Line of Business *</label><input type="text" id="bizNature" placeholder="e.g. General Merchandise, Catering, Consulting..."></div>
+            <div class="fg"><label>Business Address *</label><textarea id="bizAddress" placeholder="Full business address including LGA and State"></textarea></div>
+          </div>
+
+          <!-- ── LLC ── -->
+          <div class="dyn-section" id="sec-llc-biz">
+            <div class="fsec">🏢 Company Information</div>
+            <div class="fg"><label>Proposed Company Name — 1st Choice *</label><input type="text" id="llcName1" placeholder="e.g. Dannit Global Ventures Limited"><div class="fgh">Must end with "Limited" or "Ltd"</div></div>
+            <div class="fgr">
+              <div class="fg"><label>2nd Choice Name</label><input type="text" id="llcName2" placeholder="Alternative name"></div>
+              <div class="fg"><label>3rd Choice Name</label><input type="text" id="llcName3" placeholder="Alternative name"></div>
+            </div>
+            <div class="fg"><label>Nature / Objects of Company *</label><textarea id="llcObjects" placeholder="Describe the main business activities of the company..."></textarea></div>
+            <div class="fgr">
+              <div class="fg"><label>Registered Office Address *</label><textarea id="llcAddress" placeholder="Full registered office address in Nigeria"></textarea></div>
+              <div class="fg">
+                <div class="fg"><label>Share Capital (₦) *</label><input type="text" id="llcShareCapital" placeholder="e.g. 100,000"><div class="fgh">Minimum share capital is ₦100,000</div></div>
+                <div class="fg"><label>Number of Directors *</label>
+                  <select id="llcNumDirectors" onchange="renderDirectors()">
+                    <option value="">Select...</option>
+                    <option value="2">2 Directors</option>
+                    <option value="3">3 Directors</option>
+                    <option value="4">4 Directors</option>
+                    <option value="5">5 Directors</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div id="llcDirectorsWrap"></div>
+            <div class="fg"><label>Company Secretary Name *</label><input type="text" id="llcSecretary" placeholder="Full name of company secretary"></div>
+          </div>
+
+          <!-- ── PARTNERSHIP ── -->
+          <div class="dyn-section" id="sec-partnership-biz">
+            <div class="fsec">🤝 Partnership Information</div>
+            <div class="fg"><label>Partnership / Business Name — 1st Choice *</label><input type="text" id="partName1" placeholder="e.g. Dannit & Associates"></div>
+            <div class="fgr">
+              <div class="fg"><label>2nd Choice Name</label><input type="text" id="partName2" placeholder="Alternative name"></div>
+              <div class="fg"><label>3rd Choice Name</label><input type="text" id="partName3" placeholder="Alternative name"></div>
+            </div>
+            <div class="fg"><label>Nature of Business *</label><input type="text" id="partNature" placeholder="e.g. Legal Services, Construction, Trading..."></div>
+            <div class="fg"><label>Principal Place of Business *</label><textarea id="partAddress" placeholder="Full address of the partnership's main office"></textarea></div>
+            <div class="fsec">👥 Partner Details</div>
+            <div class="person-block">
+              <div class="person-block-title">Partner 1</div>
+              <div class="fgr"><div class="fg"><label>Full Name *</label><input type="text" id="part1Name" placeholder="Full legal name"></div><div class="fg"><label>Date of Birth *</label><input type="date" id="part1DOB"></div></div>
+              <div class="fg"><label>Residential Address *</label><input type="text" id="part1Address" placeholder="Home address"></div>
+              <div class="fgr"><div class="fg"><label>Phone Number *</label><input type="tel" id="part1Phone" placeholder="08012345678"></div><div class="fg"><label>Nationality *</label><input type="text" id="part1Nationality" value="Nigerian"></div></div>
+              <div class="fgr"><div class="fg"><label>Means of ID *</label><select id="part1IDType"><option value="">Select ID...</option><option>National ID (NIN)</option><option>International Passport</option><option>Driver's Licence</option><option>Voter's Card</option></select></div><div class="fg"><label>ID Number *</label><input type="text" id="part1IDNum" placeholder="ID number"></div></div>
+            </div>
+            <div class="person-block">
+              <div class="person-block-title">Partner 2</div>
+              <div class="fgr"><div class="fg"><label>Full Name *</label><input type="text" id="part2Name" placeholder="Full legal name"></div><div class="fg"><label>Date of Birth *</label><input type="date" id="part2DOB"></div></div>
+              <div class="fg"><label>Residential Address *</label><input type="text" id="part2Address" placeholder="Home address"></div>
+              <div class="fgr"><div class="fg"><label>Phone Number *</label><input type="tel" id="part2Phone" placeholder="08012345678"></div><div class="fg"><label>Nationality *</label><input type="text" id="part2Nationality" value="Nigerian"></div></div>
+              <div class="fgr"><div class="fg"><label>Means of ID *</label><select id="part2IDType"><option value="">Select ID...</option><option>National ID (NIN)</option><option>International Passport</option><option>Driver's Licence</option><option>Voter's Card</option></select></div><div class="fg"><label>ID Number *</label><input type="text" id="part2IDNum" placeholder="ID number"></div></div>
+            </div>
+          </div>
+
+          <!-- ── NGO / INCORPORATED TRUSTEES ── -->
+          <div class="dyn-section" id="sec-ngo-biz">
+            <div class="fsec">⛪ Organization Information</div>
+            <div class="fg"><label>Organization Name — 1st Choice *</label><input type="text" id="ngoName1" placeholder="e.g. Dannit Foundation for Youth Development"><div class="fgh">Do not include "Incorporated Trustees" — CAC adds it automatically</div></div>
+            <div class="fgr">
+              <div class="fg"><label>2nd Choice Name</label><input type="text" id="ngoName2" placeholder="Alternative name"></div>
+              <div class="fg"><label>3rd Choice Name</label><input type="text" id="ngoName3" placeholder="Alternative name"></div>
+            </div>
+            <div class="fg"><label>Type of Organization *</label>
+              <select id="ngoType">
+                <option value="">Select type...</option>
+                <option>Religious Organization (Church / Mosque)</option>
+                <option>NGO / Charity / Foundation</option>
+                <option>Community / Social Club</option>
+                <option>Professional Association</option>
+                <option>Educational Institution</option>
+                <option>Other Non-Profit</option>
+              </select>
+            </div>
+            <div class="fg"><label>Aims & Objectives *</label><textarea id="ngoObjectives" placeholder="State the main aims and objectives of your organization..." style="min-height:100px"></textarea></div>
+            <div class="fg"><label>Registered Address *</label><textarea id="ngoAddress" placeholder="Full registered address of the organization"></textarea></div>
+            <div class="fgr">
+              <div class="fg"><label>Date of Establishment *</label><input type="date" id="ngoEstDate"></div>
+              <div class="fg"><label>Newspaper for Publication *</label><input type="text" id="ngoPaper" placeholder="e.g. The Punch, Vanguard, Guardian"><div class="fgh">CAC requires newspaper publication of registration notice</div></div>
+            </div>
+            <div class="fsec">👥 Trustees (Minimum 2 Required)</div>
+            <div class="person-block">
+              <div class="person-block-title">Trustee 1 (Chairman / Lead Trustee)</div>
+              <div class="fgr"><div class="fg"><label>Full Name *</label><input type="text" id="trustee1Name" placeholder="Full legal name"></div><div class="fg"><label>Date of Birth *</label><input type="date" id="trustee1DOB"></div></div>
+              <div class="fgr"><div class="fg"><label>Occupation *</label><input type="text" id="trustee1Occ" placeholder="e.g. Engineer, Pastor, Doctor..."></div><div class="fg"><label>Nationality *</label><input type="text" id="trustee1Nat" value="Nigerian"></div></div>
+              <div class="fg"><label>Residential Address *</label><input type="text" id="trustee1Address" placeholder="Home address"></div>
+              <div class="fgr"><div class="fg"><label>Means of ID *</label><select id="trustee1IDType"><option value="">Select ID...</option><option>National ID (NIN)</option><option>International Passport</option><option>Driver's Licence</option><option>Voter's Card</option></select></div><div class="fg"><label>ID Number *</label><input type="text" id="trustee1IDNum" placeholder="ID number"></div></div>
+            </div>
+            <div class="person-block">
+              <div class="person-block-title">Trustee 2</div>
+              <div class="fgr"><div class="fg"><label>Full Name *</label><input type="text" id="trustee2Name" placeholder="Full legal name"></div><div class="fg"><label>Date of Birth *</label><input type="date" id="trustee2DOB"></div></div>
+              <div class="fgr"><div class="fg"><label>Occupation *</label><input type="text" id="trustee2Occ" placeholder="e.g. Teacher, Accountant..."></div><div class="fg"><label>Nationality *</label><input type="text" id="trustee2Nat" value="Nigerian"></div></div>
+              <div class="fg"><label>Residential Address *</label><input type="text" id="trustee2Address" placeholder="Home address"></div>
+              <div class="fgr"><div class="fg"><label>Means of ID *</label><select id="trustee2IDType"><option value="">Select ID...</option><option>National ID (NIN)</option><option>International Passport</option><option>Driver's Licence</option><option>Voter's Card</option></select></div><div class="fg"><label>ID Number *</label><input type="text" id="trustee2IDNum" placeholder="ID number"></div></div>
+            </div>
+          </div>
+
+          <!-- ── POST-REGISTRATION COMPLIANCE ── -->
+          <div class="dyn-section" id="sec-compliance-biz">
+            <div class="fsec">📋 Existing Registration Details</div>
+            <div class="fgr">
+              <div class="fg"><label>RC / BN Number *</label><input type="text" id="compRCNum" placeholder="e.g. RC123456 or BN123456"><div class="fgh">Your current CAC registration number</div></div>
+              <div class="fg"><label>Registered Business / Company Name *</label><input type="text" id="compBizName" placeholder="Full registered name as on certificate"></div>
+            </div>
+            <div class="fg"><label>Type of Compliance / Filing Required *</label>
+              <select id="compType">
+                <option value="">Select filing type...</option>
+                <option>Annual Return (Business Name)</option>
+                <option>Annual Return (Company / LLC)</option>
+                <option>Change of Business Address</option>
+                <option>Change / Addition of Director</option>
+                <option>Change of Company Name</option>
+                <option>Change of Shareholders</option>
+                <option>Increase in Share Capital</option>
+                <option>Change of Registered Trustee</option>
+                <option>Winding Up / Dissolution</option>
+                <option>Other (specify in notes)</option>
+              </select>
+            </div>
+            <div class="fg"><label>Year(s) of Annual Return (if applicable)</label><input type="text" id="compYears" placeholder="e.g. 2021, 2022, 2023"></div>
+            <div class="fg"><label>Details / Special Instructions *</label><textarea id="compDetails" placeholder="Describe exactly what changes or filings are needed..." style="min-height:100px"></textarea></div>
+          </div>
+
+          <!-- ── NAME SEARCH ── -->
+          <div class="dyn-section" id="sec-search-biz">
+            <div class="fsec">🔍 Names to Search</div>
+            <div class="fg"><label>Business Name — 1st Choice *</label><input type="text" id="searchName1" placeholder="Your preferred business name"><div class="fgh">We will check if this name is available at CAC</div></div>
+            <div class="fg"><label>Business Name — 2nd Choice</label><input type="text" id="searchName2" placeholder="Alternative name to check"></div>
+            <div class="fg"><label>Business Name — 3rd Choice</label><input type="text" id="searchName3" placeholder="Another alternative"></div>
+            <div class="fg"><label>Type of Registration You're Planning *</label>
+              <select id="searchRegType">
+                <option value="">Select intended type...</option>
+                <option>Business Name (Sole Proprietorship)</option>
+                <option>Limited Liability Company (LLC)</option>
+                <option>Partnership</option>
+                <option>Incorporated Trustees (NGO / Church)</option>
+              </select>
+            </div>
+            <div class="fg"><label>Nature of Business</label><input type="text" id="searchNature" placeholder="What will the business do?"></div>
+          </div>
+
+        </div><!-- end fp0 -->
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- STEP 2: APPLICANT / CONTACT DETAILS -->
+        <!-- ═══════════════════════════════════════════ -->
+        <div class="fpanel" id="fp1">
+          <div class="fsec">👤 Your Details (Applicant / Contact Person)</div>
+          <div class="fgr">
+            <div class="fg"><label>First Name *</label><input type="text" id="fname" placeholder="First name"></div>
+            <div class="fg"><label>Last Name *</label><input type="text" id="lname" placeholder="Last name"></div>
+          </div>
+          <div class="fg"><label>Email Address *</label><input type="email" id="email" placeholder="your@email.com"><div class="fgh">Certificate and all updates will be sent here</div></div>
+          <div class="fgr">
+            <div class="fg"><label>Phone Number *</label><input type="tel" id="phone" placeholder="08012345678"></div>
+            <div class="fg"><label>WhatsApp Number *</label><input type="tel" id="whatsapp" placeholder="08012345678"><div class="fgh">We'll contact you here for documents</div></div>
+          </div>
+
+          <!-- Proprietor details — only for Business Name type -->
+          <div class="dyn-section" id="sec-bn-applicant">
+            <div class="fsec">📋 Proprietor Details</div>
+            <div class="fgr">
+              <div class="fg"><label>Date of Birth *</label><input type="date" id="dob"></div>
+              <div class="fg"><label>Nationality *</label><input type="text" id="nationality" value="Nigerian"></div>
+            </div>
+            <div class="fg"><label>Residential Address *</label><textarea id="resAddress" placeholder="Your full home address"></textarea></div>
+            <div class="fgr">
+              <div class="fg"><label>Means of ID *</label><select id="idType"><option value="">Select ID type...</option><option>National ID (NIN Slip)</option><option>International Passport</option><option>Driver's Licence</option><option>Permanent Voter's Card</option></select></div>
+              <div class="fg"><label>ID Number *</label><input type="text" id="idNum" placeholder="Enter your ID number"></div>
+            </div>
+            <div class="fg"><label>Occupation *</label><input type="text" id="bnOccupation" placeholder="Your occupation / profession"></div>
+          </div>
+
+          <!-- Contact role for other types -->
+          <div class="dyn-section" id="sec-other-applicant">
+            <div class="fg"><label>Your Role / Relationship to the Entity *</label>
+              <select id="applicantRole">
+                <option value="">Select role...</option>
+                <option>Director</option>
+                <option>Shareholder</option>
+                <option>Company Secretary</option>
+                <option>Trustee</option>
+                <option>Partner</option>
+                <option>Legal Representative / Agent</option>
+              </select>
+            </div>
+          </div>
+        </div><!-- end fp1 -->
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- STEP 3: DOCUMENTS & CONFIRM -->
+        <!-- ═══════════════════════════════════════════ -->
+        <div class="fpanel" id="fp2">
+          <!-- Documents needed — dynamic per type -->
+          <div class="dn" id="docNotice">
+            <div class="dnt">📲 Documents to Send via WhatsApp After Submission</div>
+            <p>You don't upload here. After submitting, click the WhatsApp button and send these documents to our team:</p>
+            <ul class="dl" id="docList"></ul>
+          </div>
+          <div class="summary-box">
+            <div class="summary-box-title">Application Summary</div>
+            <div id="summary" style="font-size:.83rem;color:var(--g6);line-height:2">Complete previous steps to see summary.</div>
+          </div>
+          <div class="fg"><label>Additional Notes / Special Instructions</label><textarea id="notes" placeholder="Any special requests or information for our team..."></textarea></div>
+          <div class="trow">
+            <input type="checkbox" id="terms">
+            <label for="terms">I confirm all information provided is accurate and I authorize DANNIT ENTERPRISES to act as my registration agent with the Corporate Affairs Commission (CAC) on my behalf.</label>
+          </div>
+        </div><!-- end fp2 -->
+
+      </div><!-- end formBody -->
+
+      <div class="ffoot" id="formFooter" style="display:none">
+        <div>
+          <div class="fpl" id="stepLabel">Step 1 of 3</div>
+          <div class="fpdots"><div class="pp active" id="pp0"></div><div class="pp" id="pp1"></div><div class="pp" id="pp2"></div></div>
+        </div>
+        <div style="display:flex;gap:.75rem">
+          <button class="bbk" id="btnBack" style="display:none" onclick="changeStep(-1)">← Back</button>
+          <button class="bnx" id="btnNext" onclick="changeStep(1)">Continue →</button>
+          <button class="bsb" id="btnSubmit" onclick="submitForm()">Submit Application ✦</button>
+        </div>
+      </div>
+    </div><!-- end fcard -->
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="trust">
+  <div style="text-align:center">
+    <div class="sec-label" style="text-align:center">// Why Choose DANNIT</div>
+    <h2 class="sec-title" style="text-align:center;max-width:100%">Trusted by Hundreds Across Nigeria</h2>
+  </div>
+  <div class="trgrid">
+    <div class="trc"><div class="tri">🔐</div><div class="trt">Secure & Private</div><div class="trd">Your data and documents are handled with strict confidentiality</div></div>
+    <div class="trc"><div class="tri">⚡</div><div class="trt">Fast Turnaround</div><div class="trd">Most registrations done within 24–72 hours of receiving documents</div></div>
+    <div class="trc"><div class="tri">🎓</div><div class="trt">Expert Handling</div><div class="trd">Experienced professionals who know the CAC process inside out</div></div>
+    <div class="trc"><div class="tri">📞</div><div class="trt">Real Support</div><div class="trd">Dedicated human support via WhatsApp, email and phone calls</div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="padding:7rem 4rem;background:var(--gd);position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(46,173,82,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(46,173,82,.03) 1px,transparent 1px);background-size:56px 56px;pointer-events:none"></div>
+  <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;position:relative">
+    <div>
+      <div class="sec-label" style="color:#6FCF85">// Get In Touch</div>
+      <h2 class="sec-title" style="color:var(--w);margin-bottom:1rem">Have Questions?<br><em style="font-style:italic;color:var(--goldl)">We're Here For You.</em></h2>
+      <p style="color:rgba(255,255,255,.45);font-size:.95rem;line-height:1.75;font-weight:300;margin-bottom:2.5rem">Whether you're unsure which registration type you need, want pricing info, or just need guidance — reach out and we'll respond promptly.</p>
+      <div style="display:flex;flex-direction:column;gap:1rem">
+        <a href="https://wa.me/2347068655350?text=Hi%20DANNIT%20ENTERPRISES%2C%20I%20have%20a%20question." target="_blank" style="display:flex;align-items:center;gap:1.25rem;background:rgba(37,211,102,.08);border:1px solid rgba(37,211,102,.25);padding:1.25rem 1.5rem;text-decoration:none;transition:all .2s" onmouseover="this.style.background='rgba(37,211,102,.14)'" onmouseout="this.style.background='rgba(37,211,102,.08)'">
+          <div style="width:44px;height:44px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0">💬</div>
+          <div><div style="font-family:'DM Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:#25D366;margin-bottom:.25rem">WhatsApp — Fastest</div><div style="color:var(--w);font-size:.95rem;font-weight:500">07068655350</div><div style="color:rgba(255,255,255,.35);font-size:.78rem">Tap to open chat</div></div>
+          <div style="margin-left:auto;color:rgba(37,211,102,.5)">→</div>
+        </a>
+        <a href="mailto:lawaloyindamolashinaayomi@gmail.com" style="display:flex;align-items:center;gap:1.25rem;background:rgba(201,151,42,.07);border:1px solid rgba(201,151,42,.2);padding:1.25rem 1.5rem;text-decoration:none;transition:all .2s" onmouseover="this.style.background='rgba(201,151,42,.13)'" onmouseout="this.style.background='rgba(201,151,42,.07)'">
+          <div style="width:44px;height:44px;background:rgba(201,151,42,.2);border:1px solid rgba(201,151,42,.3);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0">✉️</div>
+          <div><div style="font-family:'DM Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:var(--goldl);margin-bottom:.25rem">Email Us</div><div style="color:var(--w);font-size:.85rem;font-weight:500;word-break:break-all">dannitenterprises@gmail.com</div><div style="color:rgba(255,255,255,.35);font-size:.78rem">Response within a few hours</div></div>
+          <div style="margin-left:auto;color:rgba(201,151,42,.5)">→</div>
+        </a>
+        <div style="display:flex;align-items:center;gap:1.25rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);padding:1.25rem 1.5rem">
+          <div style="width:44px;height:44px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0">🕐</div>
+          <div><div style="font-family:'DM Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.4);margin-bottom:.25rem">Office Hours</div><div style="color:var(--w);font-size:.92rem;font-weight:500">Monday – Saturday: 8am – 6pm</div><div style="color:rgba(255,255,255,.35);font-size:.78rem">WAT (West Africa Time)</div></div>
+        </div>
+      </div>
+    </div>
+    <div style="background:rgba(255,255,255,.04);border:1px solid rgba(46,173,82,.15);position:relative">
+      <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gb),var(--goldl))"></div>
+      <div style="padding:2rem">
+        <div style="font-family:'DM Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#6FCF85;margin-bottom:.5rem">Quick Message</div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--w);margin-bottom:.5rem">Send Us a Message</h3>
+        <p style="font-size:.82rem;color:rgba(255,255,255,.35);margin-bottom:1.75rem;font-weight:300">Not ready to register yet? Ask us anything.</p>
+        <div style="margin-bottom:1rem"><label style="display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.5);font-weight:600;margin-bottom:.4rem">Your Name *</label><input id="cName" type="text" placeholder="Full name" style="width:100%;padding:.8rem 1rem;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);color:var(--w);font-family:'Outfit',sans-serif;font-size:.88rem;outline:none;transition:border-color .2s;border-radius:2px" onfocus="this.style.borderColor='var(--gb)'" onblur="this.style.borderColor='rgba(255,255,255,.1)'"></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem">
+          <div><label style="display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.5);font-weight:600;margin-bottom:.4rem">Phone *</label><input id="cPhone" type="tel" placeholder="08012345678" style="width:100%;padding:.8rem 1rem;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);color:var(--w);font-family:'Outfit',sans-serif;font-size:.88rem;outline:none;transition:border-color .2s;border-radius:2px" onfocus="this.style.borderColor='var(--gb)'" onblur="this.style.borderColor='rgba(255,255,255,.1)'"></div>
+          <div><label style="display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.5);font-weight:600;margin-bottom:.4rem">Email</label><input id="cEmail" type="email" placeholder="optional" style="width:100%;padding:.8rem 1rem;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);color:var(--w);font-family:'Outfit',sans-serif;font-size:.88rem;outline:none;transition:border-color .2s;border-radius:2px" onfocus="this.style.borderColor='var(--gb)'" onblur="this.style.borderColor='rgba(255,255,255,.1)'"></div>
+        </div>
+        <div style="margin-bottom:1rem"><label style="display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.5);font-weight:600;margin-bottom:.4rem">Topic *</label>
+          <select id="cTopic" style="width:100%;padding:.8rem 1rem;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-family:'Outfit',sans-serif;font-size:.88rem;outline:none;appearance:none;transition:border-color .2s;border-radius:2px" onfocus="this.style.borderColor='var(--gb)'" onblur="this.style.borderColor='rgba(255,255,255,.1)'">
+            <option value="" style="background:#0D3320">Select topic...</option>
+            <option value="Pricing enquiry" style="background:#0D3320">Pricing & Fees</option>
+            <option value="Business Name enquiry" style="background:#0D3320">Business Name Registration</option>
+            <option value="LLC enquiry" style="background:#0D3320">Limited Liability Company</option>
+            <option value="NGO enquiry" style="background:#0D3320">NGO / Church / Trustees</option>
+            <option value="Partnership enquiry" style="background:#0D3320">Partnership Registration</option>
+            <option value="Compliance enquiry" style="background:#0D3320">Post-Registration Compliance</option>
+            <option value="General enquiry" style="background:#0D3320">General Question</option>
+          </select>
+        </div>
+        <div style="margin-bottom:1.5rem"><label style="display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.5);font-weight:600;margin-bottom:.4rem">Message *</label><textarea id="cMsg" placeholder="Tell us what you need..." style="width:100%;padding:.8rem 1rem;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);color:var(--w);font-family:'Outfit',sans-serif;font-size:.88rem;outline:none;resize:vertical;min-height:100px;transition:border-color .2s;border-radius:2px" onfocus="this.style.borderColor='var(--gb)'" onblur="this.style.borderColor='rgba(255,255,255,.1)'"></textarea></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem">
+          <button onclick="sendViaWA()" style="background:#25D366;color:#fff;border:none;padding:.85rem 1rem;font-family:'Outfit',sans-serif;font-size:.82rem;font-weight:600;cursor:pointer;border-radius:2px;transition:background .2s" onmouseover="this.style.background='#1ebe5a'" onmouseout="this.style.background='#25D366'">💬 WhatsApp</button>
+          <button onclick="sendViaEmail()" style="background:var(--gb);color:#fff;border:none;padding:.85rem 1rem;font-family:'Outfit',sans-serif;font-size:.82rem;font-weight:600;cursor:pointer;border-radius:2px;transition:background .2s" onmouseover="this.style.background='var(--gl)'" onmouseout="this.style.background='var(--gb)'">✉️ Email</button>
+        </div>
+        <p id="contactSuccess" style="display:none;margin-top:1rem;padding:.75rem 1rem;background:rgba(46,173,82,.12);border:1px solid rgba(46,173,82,.3);color:#6FCF85;font-size:.82rem;text-align:center;border-radius:2px">✅ Message sent! We'll get back to you shortly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fb">DANNIT<span>.</span> ENTERPRISES</div>
+  <div class="fc">© 2026 DANNIT ENTERPRISES. CAC Registration Services. Nigeria.</div>
+  <div class="fl">
+    <a href="https://wa.me/2347068655350" target="_blank">WhatsApp Us</a>
+    <a href="mailto:dannitenterprises@gmail.com">Email Us</a>
+    <a href="#">Privacy</a>
+  </div>
+</footer>
+
+<!-- SUCCESS MODAL -->
+<div class="ov" id="overlay">
+  <div class="modal">
+    <div class="mseal">✅</div>
+    <h3 class="mtit">Application Submitted!</h3>
+    <p class="mtx">Your registration request has been received. Our team will contact you on WhatsApp shortly to collect your documents and confirm next steps.</p>
+    <div class="mref" id="refNum">REF: DNT-000000</div>
+    <div class="mwa">📲 <strong>Next Step:</strong> Click below — your reference number and details are pre-filled in the WhatsApp message.</div>
+    <a id="waLink" href="#" target="_blank" style="display:flex;align-items:center;justify-content:center;gap:.6rem;background:#25D366;color:#fff;text-decoration:none;padding:1rem;font-family:'Outfit',sans-serif;font-size:.9rem;font-weight:600;margin-bottom:.75rem;border-radius:2px;transition:background .2s" onmouseover="this.style.background='#1ebe5a'" onmouseout="this.style.background='#25D366'">💬 Send Documents on WhatsApp Now</a>
+    <button class="mcl" onclick="closeModal()">Close — I'll send documents later</button>
+  </div>
+</div>
+
+<script>
+// ── CONFIG ──────────────────────────────────
+const EMAILJS_PUBLIC_KEY  = '59uT1jCnkUInHZl9i';
+const EMAILJS_SERVICE_ID  = 'service_yjeguvg';
+const EMAILJS_TEMPLATE_ID = 'template_fh8ql3w';
+const EMAIL_1 = 'lawaloyindamolashinaayomi@gmail.com';
+const EMAIL_2 = 'dannitenterprises@gmail.com'; // Add second email here if needed
+const WA_NUMBER = '2347068655350';
+// ────────────────────────────────────────────
+emailjs.init(EMAILJS_PUBLIC_KEY);
+
+// ── HELPERS ─────────────────────────────────
+const v  = id => { const el = document.getElementById(id); return (el && el.value && el.value.trim()) ? el.value.trim() : '—'; };
+const fmtDOB = r => { if (!r || r==='—') return '—'; const p=r.split('-'); return p[2]+'/'+p[1]+'/'+p[0]; };
+const show = id => { const el=document.getElementById(id); if(el) el.classList.add('show'); };
+const hide = id => { const el=document.getElementById(id); if(el) el.classList.remove('show'); };
+const allDyn = () => document.querySelectorAll('.dyn-section').forEach(el => el.classList.remove('show'));
+
+// ── TYPE CONFIG ──────────────────────────────
+const typeConfig = {
+  bn: {
+    label: 'Business Name Registration',
+    hint: 'Sole Proprietorship — for individual entrepreneurs',
+    bizSections: ['sec-bn-biz'],
+    applicantSections: ['sec-bn-applicant'],
+    docs: [
+      'Valid government-issued photo ID (NIN / Passport / Driver\'s Licence / Voter\'s Card)',
+      'Passport photograph — white background, recent',
+      'Proof of address (utility bill not older than 3 months)',
+      'Signature specimen on white paper'
+    ]
+  },
+  llc: {
+    label: 'Limited Liability Company (LLC)',
+    hint: 'For companies — requires minimum 2 directors',
+    bizSections: ['sec-llc-biz'],
+    applicantSections: ['sec-other-applicant'],
+    docs: [
+      'Valid photo ID for ALL directors (NIN / Passport / Driver\'s Licence)',
+      'Passport photograph for each director — white background',
+      'Proof of address for each director (utility bill, max 3 months old)',
+      'Memorandum & Articles of Association (we can prepare this)',
+      'Statement of share capital and shareholding details'
+    ]
+  },
+  partnership: {
+    label: 'Partnership Registration',
+    hint: 'For 2 or more individuals in business together',
+    bizSections: ['sec-partnership-biz'],
+    applicantSections: ['sec-other-applicant'],
+    docs: [
+      'Valid photo ID for ALL partners (NIN / Passport / Driver\'s Licence / Voter\'s Card)',
+      'Passport photograph for each partner — white background',
+      'Proof of address for each partner (utility bill, max 3 months old)',
+      'Signed partnership agreement / deed (optional but recommended)'
+    ]
+  },
+  ngo: {
+    label: 'Incorporated Trustees (NGO / Church / Association)',
+    hint: 'For non-profits, religious bodies & associations',
+    bizSections: ['sec-ngo-biz'],
+    applicantSections: ['sec-other-applicant'],
+    docs: [
+      'Valid photo ID for ALL trustees (minimum 2 trustees required)',
+      'Passport photograph for each trustee — white background',
+      'Draft constitution / rules of the organization',
+      'Minutes of meeting showing election of trustees',
+      'Newspaper publication receipt (CAC requires public notice — we guide you)',
+      'Proof of address for each trustee'
+    ]
+  },
+  compliance: {
+    label: 'Post-Registration Compliance',
+    hint: 'Annual returns, changes, amendments',
+    bizSections: ['sec-compliance-biz'],
+    applicantSections: ['sec-other-applicant'],
+    docs: [
+      'Original or copy of your CAC certificate',
+      'Valid photo ID of the authorized person / director',
+      'Supporting documents relevant to the change requested',
+      'For annual returns: Financial statements (if applicable)'
+    ]
+  },
+  search: {
+    label: 'Business Name Search Only',
+    hint: 'Check availability before committing to registration',
+    bizSections: ['sec-search-biz'],
+    applicantSections: [],
+    docs: [
+      'No documents required for name search',
+      'Results are typically ready within a few hours'
+    ]
+  }
+};
+
+let currentType = '';
+let step = 0;
+
+// ── ON TYPE CHANGE ───────────────────────────
+window.onTypeChange = function(type) {
+  currentType = type;
+  allDyn();
+  if (!type) {
+    document.getElementById('typeHint').textContent = 'Please select a type to begin filling the form';
+    document.getElementById('stepTabs').style.display = 'none';
+    document.getElementById('formBody').style.display = 'none';
+    document.getElementById('formFooter').style.display = 'none';
+    return;
+  }
+  const cfg = typeConfig[type];
+  document.getElementById('typeHint').textContent = '✓ ' + cfg.hint;
+  // Show relevant sections
+  cfg.bizSections.forEach(show);
+  cfg.applicantSections.forEach(show);
+  // Update document list
+  const dl = document.getElementById('docList');
+  dl.innerHTML = cfg.docs.map(d => `<li>${d}</li>`).join('');
+  // Show/hide step 2 applicant tab based on type
+  const tab1 = document.getElementById('tab1');
+  tab1.style.display = type === 'search' ? 'none' : 'flex';
+  // Show form
+  document.getElementById('stepTabs').style.display = 'flex';
+  document.getElementById('formBody').style.display = 'block';
+  document.getElementById('formFooter').style.display = 'flex';
+  // Reset to step 0
+  step = 0;
+  updateUI();
+};
+
+// Allow clicking service cards to pre-select type
+window.selectTypeAndScroll = function(type) {
+  document.getElementById('regType').value = type;
+  window.onTypeChange(type);
+  document.getElementById('register').scrollIntoView({ behavior: 'smooth' });
+};
+
+// ── STEP NAVIGATION ──────────────────────────
+const stepLabels = ['Step 1 of 3 — Details', 'Step 2 of 3 — Applicant', 'Step 3 of 3 — Confirm & Submit'];
+
+window.updateUI = function() {
+  document.querySelectorAll('.fpanel').forEach((p,i) => p.classList.toggle('active', i===step));
+  document.querySelectorAll('.tbtn').forEach((t,i) => { t.classList.toggle('active',i===step); t.classList.toggle('done',i<step); });
+  ['pp0','pp1','pp2'].forEach((id,i) => { const el=document.getElementById(id); el.className='pp'+(i<step?' done':i===step?' active':''); });
+  document.getElementById('stepLabel').textContent = stepLabels[step] || `Step ${step+1} of 3`;
+  document.getElementById('btnBack').style.display = step > 0 ? 'inline-block' : 'none';
+  document.getElementById('btnNext').style.display = step < 2 ? 'inline-block' : 'none';
+  document.getElementById('btnSubmit').style.display = step === 2 ? 'block' : 'none';
+  if (step === 2) window.buildSummary();
+};
+
+window.changeStep = function(dir) {
+  // Skip step 1 for name search (no applicant details needed)
+  let next = step + dir;
+  if (currentType === 'search' && next === 1) next += dir;
+  if (next < 0 || next > 2) return;
+  step = next; window.updateUI();
+  document.querySelector('.fcard').scrollIntoView({ behavior:'smooth', block:'start' });
+};
+
+document.querySelectorAll('.tbtn').forEach((btn,i) => btn.addEventListener('click', () => { if(i<=step){ step=i; window.updateUI(); } }));
+
+// ── RENDER LLC DIRECTORS ─────────────────────
+window.renderDirectors = function() {
+  const n = parseInt(document.getElementById('llcNumDirectors').value) || 0;
+  const wrap = document.getElementById('llcDirectorsWrap');
+  wrap.innerHTML = '';
+  for (let i = 1; i <= n; i++) {
+    wrap.innerHTML += `
+      <div class="person-block">
+        <div class="person-block-title">Director ${i}${i===1?' (Managing Director / CEO)':''}</div>
+        <div class="fgr"><div class="fg"><label>Full Name *</label><input type="text" id="dir${i}Name" placeholder="Full legal name"></div><div class="fg"><label>Date of Birth *</label><input type="date" id="dir${i}DOB"></div></div>
+        <div class="fg"><label>Residential Address *</label><input type="text" id="dir${i}Address" placeholder="Home address"></div>
+        <div class="fgr"><div class="fg"><label>Nationality *</label><input type="text" id="dir${i}Nat" value="Nigerian"></div><div class="fg"><label>Occupation *</label><input type="text" id="dir${i}Occ" placeholder="e.g. Businessman, Engineer..."></div></div>
+        <div class="fgr"><div class="fg"><label>Means of ID *</label><select id="dir${i}IDType"><option value="">Select ID...</option><option>National ID (NIN)</option><option>International Passport</option><option>Driver's Licence</option><option>Voter's Card</option></select></div><div class="fg"><label>ID Number *</label><input type="text" id="dir${i}IDNum" placeholder="ID number"></div></div>
+        <div class="fgr"><div class="fg"><label>Shares Held</label><input type="text" id="dir${i}Shares" placeholder="e.g. 50,000 ordinary shares"></div><div class="fg"><label>Phone Number *</label><input type="text" id="dir${i}Phone" placeholder="08012345678"></div></div>
+      </div>`;
+  }
+};
+
+// ── BUILD SUMMARY ────────────────────────────
+window.buildSummary = function() {
+  const cfg = typeConfig[currentType] || {};
+  let html = `<b>Registration Type:</b> ${cfg.label || '—'}<br><br>`;
+  if (currentType === 'bn') {
+    html += `<b>Business Name:</b> ${v('bName1')} &nbsp;|&nbsp; 2nd: ${v('bName2')} &nbsp;|&nbsp; 3rd: ${v('bName3')}<br>
+             <b>Nature of Business:</b> ${v('bizNature')}<br>
+             <b>Business Address:</b> ${v('bizAddress')}<br><br>
+             <b>Proprietor:</b> ${v('fname')} ${v('lname')}<br>
+             <b>Phone:</b> ${v('phone')} &nbsp;|&nbsp; <b>WhatsApp:</b> ${v('whatsapp')}<br>
+             <b>Email:</b> ${v('email')}<br>
+             <b>DOB:</b> ${fmtDOB(v('dob'))} &nbsp;|&nbsp; <b>Nationality:</b> ${v('nationality')}<br>
+             <b>ID:</b> ${v('idType')} — ${v('idNum')}<br>
+             <b>Occupation:</b> ${v('bnOccupation')}`;
+  } else if (currentType === 'llc') {
+    const n = parseInt(document.getElementById('llcNumDirectors')?.value) || 0;
+    let dirs = '';
+    for (let i=1;i<=n;i++) dirs += `<br>&nbsp;&nbsp;• Dir ${i}: ${v('dir'+i+'Name')} | DOB: ${fmtDOB(v('dir'+i+'DOB'))} | ID: ${v('dir'+i+'IDType')} ${v('dir'+i+'IDNum')}`;
+    html += `<b>Company Name:</b> ${v('llcName1')} &nbsp;|&nbsp; 2nd: ${v('llcName2')}<br>
+             <b>Objects:</b> ${v('llcObjects')}<br>
+             <b>Share Capital:</b> ₦${v('llcShareCapital')} &nbsp;|&nbsp; <b>Secretary:</b> ${v('llcSecretary')}<br>
+             <b>Directors (${n}):</b>${dirs}<br><br>
+             <b>Contact:</b> ${v('fname')} ${v('lname')} — ${v('applicantRole')}<br>
+             <b>Phone:</b> ${v('phone')} &nbsp;|&nbsp; <b>WhatsApp:</b> ${v('whatsapp')}<br>
+             <b>Email:</b> ${v('email')}`;
+  } else if (currentType === 'partnership') {
+    html += `<b>Partnership Name:</b> ${v('partName1')}<br>
+             <b>Nature:</b> ${v('partNature')}<br>
+             <b>Partner 1:</b> ${v('part1Name')} | DOB: ${fmtDOB(v('part1DOB'))} | ID: ${v('part1IDType')} ${v('part1IDNum')}<br>
+             <b>Partner 2:</b> ${v('part2Name')} | DOB: ${fmtDOB(v('part2DOB'))} | ID: ${v('part2IDType')} ${v('part2IDNum')}<br><br>
+             <b>Contact:</b> ${v('fname')} ${v('lname')} | ${v('phone')} | ${v('email')}`;
+  } else if (currentType === 'ngo') {
+    html += `<b>Organization Name:</b> ${v('ngoName1')}<br>
+             <b>Type:</b> ${v('ngoType')}<br>
+             <b>Objectives:</b> ${v('ngoObjectives').substring(0,100)}...<br>
+             <b>Established:</b> ${fmtDOB(v('ngoEstDate'))} &nbsp;|&nbsp; <b>Newspaper:</b> ${v('ngoPaper')}<br>
+             <b>Trustee 1:</b> ${v('trustee1Name')} | ${v('trustee1Occ')} | ID: ${v('trustee1IDType')} ${v('trustee1IDNum')}<br>
+             <b>Trustee 2:</b> ${v('trustee2Name')} | ${v('trustee2Occ')} | ID: ${v('trustee2IDType')} ${v('trustee2IDNum')}<br><br>
+             <b>Contact:</b> ${v('fname')} ${v('lname')} | ${v('phone')} | ${v('email')}`;
+  } else if (currentType === 'compliance') {
+    html += `<b>RC/BN Number:</b> ${v('compRCNum')}<br>
+             <b>Registered Name:</b> ${v('compBizName')}<br>
+             <b>Filing Required:</b> ${v('compType')}<br>
+             <b>Year(s):</b> ${v('compYears')}<br>
+             <b>Details:</b> ${v('compDetails')}<br><br>
+             <b>Contact:</b> ${v('fname')} ${v('lname')} | ${v('phone')} | ${v('email')}`;
+  } else if (currentType === 'search') {
+    html += `<b>Name 1:</b> ${v('searchName1')}<br>
+             <b>Name 2:</b> ${v('searchName2')}<br>
+             <b>Name 3:</b> ${v('searchName3')}<br>
+             <b>Intended Registration:</b> ${v('searchRegType')}<br>
+             <b>Nature:</b> ${v('searchNature')}<br><br>
+             <b>Contact:</b> ${v('fname')} ${v('lname')} | ${v('phone')} | ${v('email')}`;
+  }
+  document.getElementById('summary').innerHTML = html;
+};
+
+// ── SUBMIT ───────────────────────────────────
+window.submitForm = async function() {
+  if (!document.getElementById('terms').checked) { alert('Please agree to the authorization statement before submitting.'); return; }
+  const ref = 'DNT-' + Math.floor(100000 + Math.random() * 900000);
+  const btn = document.getElementById('btnSubmit');
+  btn.textContent = 'Sending…'; btn.disabled = true;
+
+  const cfg = typeConfig[currentType] || {};
+  const n = parseInt(document.getElementById('llcNumDirectors')?.value) || 0;
+  let dirInfo = '';
+  for (let i=1;i<=n;i++) dirInfo += `\nDir ${i}: ${v('dir'+i+'Name')} | DOB: ${fmtDOB(v('dir'+i+'DOB'))} | ${v('dir'+i+'IDType')} ${v('dir'+i+'IDNum')} | Shares: ${v('dir'+i+'Shares')}`;
+
+  const params = {
+    ref_number:    ref,
+    submitted_at:  new Date().toLocaleString('en-NG', { timeZone: 'Africa/Lagos' }),
+    reg_type:      cfg.label || currentType,
+    full_name:     `${v('fname')} ${v('lname')}`,
+    client_email:  v('email'),
+    phone:         v('phone'),
+    whatsapp:      v('whatsapp'),
+    notes:         v('notes'),
+    // Business details packed into one field for email
+    business_name_1: currentType==='bn'?v('bName1'):currentType==='llc'?v('llcName1'):currentType==='partnership'?v('partName1'):currentType==='ngo'?v('ngoName1'):currentType==='search'?v('searchName1'):v('compBizName'),
+    business_name_2: currentType==='bn'?v('bName2'):currentType==='llc'?v('llcName2'):currentType==='partnership'?v('partName2'):currentType==='ngo'?v('ngoName2'):currentType==='search'?v('searchName2'):'—',
+    business_name_3: currentType==='bn'?v('bName3'):currentType==='llc'?v('llcName3'):currentType==='partnership'?v('partName3'):currentType==='ngo'?v('ngoName3'):currentType==='search'?v('searchName3'):'—',
+    nature:        currentType==='bn'?v('bizNature'):currentType==='llc'?v('llcObjects'):currentType==='partnership'?v('partNature'):currentType==='ngo'?v('ngoObjectives'):currentType==='search'?v('searchNature'):v('compType'),
+    biz_address:   currentType==='bn'?v('bizAddress'):currentType==='llc'?v('llcAddress'):currentType==='partnership'?v('partAddress'):currentType==='ngo'?v('ngoAddress'):currentType==='compliance'?v('compRCNum')+' — '+v('compBizName'):'N/A',
+    dob:           fmtDOB(v('dob')),
+    nationality:   v('nationality') !== '—' ? v('nationality') : 'Nigerian',
+    res_address:   currentType==='bn'?v('resAddress'):v('applicantRole'),
+    id_type:       v('idType'),
+    id_number:     v('idNum'),
+    extra_details: currentType==='llc'?`Share Capital: ₦${v('llcShareCapital')} | Secretary: ${v('llcSecretary')}${dirInfo}`:
+                   currentType==='ngo'?`Trustees: ${v('trustee1Name')}, ${v('trustee2Name')} | Paper: ${v('ngoPaper')}`:
+                   currentType==='partnership'?`Partner 1: ${v('part1Name')} (${v('part1IDType')} ${v('part1IDNum')}) | Partner 2: ${v('part2Name')} (${v('part2IDType')} ${v('part2IDNum')})`:
+                   currentType==='compliance'?`Filing: ${v('compType')} | Years: ${v('compYears')} | Details: ${v('compDetails')}`:
+                   currentType==='search'?`Intended Type: ${v('searchRegType')}`:'',
+    to_email: EMAIL_1
+  };
+
+  const waMsg = encodeURIComponent(
+    `Hi DANNIT ENTERPRISES! 👋\n\nI just submitted my registration form.\n\n` +
+    `📋 *Ref:* ${ref}\n👤 *Name:* ${params.full_name}\n🏢 *Type:* ${params.reg_type}\n📝 *Name:* ${params.business_name_1}\n\nReady to send my documents!`
+  );
+
+  try {
+    await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, { ...params, to_email: EMAIL_1 });
+    if (EMAIL_2 && EMAIL_2.trim()) await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, { ...params, to_email: EMAIL_2 });
+  } catch(e) { console.error('EmailJS error:', e); }
+
+  document.getElementById('waLink').href = `https://wa.me/${WA_NUMBER}?text=${waMsg}`;
+  document.getElementById('refNum').textContent = 'REF: ' + ref;
+  document.getElementById('overlay').classList.add('open');
+  btn.textContent = 'Submit Application ✦'; btn.disabled = false;
+};
+
+window.closeModal = function() {
+  document.getElementById('overlay').classList.remove('open');
+  step = 0;
+  window.updateUI();
+};
+
+// ── CONTACT FORM ─────────────────────────────
+function getContactFields() {
+  const name=document.getElementById('cName').value.trim();
+  const phone=document.getElementById('cPhone').value.trim();
+  const email=document.getElementById('cEmail').value.trim();
+  const topic=document.getElementById('cTopic').value;
+  const msg=document.getElementById('cMsg').value.trim();
+  if (!name||!phone||!msg||!topic){alert('Please fill in name, phone, topic and message.');return null;}
+  return {name,phone,email,topic,msg};
+}
+window.sendViaWA = function() {
+  const f=getContactFields(); if(!f)return;
+  window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(`Hi DANNIT! 👋\n*From:* ${f.name}\n*Phone:* ${f.phone}\n*Topic:* ${f.topic}\n\n${f.msg}`)}`, '_blank');
+};
+window.sendViaEmail = function() {
+  const f=getContactFields(); if(!f)return;
+  window.location.href=`mailto:${EMAIL_1}?subject=${encodeURIComponent('Enquiry: '+f.topic+' — '+f.name)}&body=${encodeURIComponent('Name: '+f.name+'\nPhone: '+f.phone+'\nEmail: '+f.email+'\nTopic: '+f.topic+'\n\n'+f.msg)}`;
+  document.getElementById('contactSuccess').style.display='block';
+  setTimeout(()=>document.getElementById('contactSuccess').style.display='none',4000);
+};
+</script>
+</body>
+</html>

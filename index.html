@@ -262,12 +262,7 @@ footer{background:var(--gd);padding:2.5rem 4rem;display:flex;align-items:center;
   .faq-q{padding:1.2rem 1.25rem;align-items:center}
   .faq-icon{width:38px;height:38px;min-width:38px;font-size:1.05rem}
   #contact{padding:4rem 1.5rem!important}
-  #contact > div > div{display:flex!important;flex-direction:column!important;gap:2.5rem!important}
-  #contact > div > div > div{width:100%!important;min-width:0!important;max-width:100%!important}
-  #contact > div > div > div > div{padding:1.5rem!important}
-  #contact input,#contact select,#contact textarea{font-size:16px!important;padding:.85rem 1rem!important}
-  #contact button{padding:1rem!important;font-size:.9rem!important}
-  #contact > div > div > div[style*="grid-template-columns"]{display:flex!important;flex-direction:column!important;gap:.75rem!important}
+  .contact-grid{grid-template-columns:1fr!important;gap:2.5rem!important}
   .chat-bubble{bottom:1rem;right:1rem}
   .chat-window{width:calc(100vw - 2rem);max-width:320px}
 }
@@ -798,7 +793,7 @@ footer{background:var(--gd);padding:2.5rem 4rem;display:flex;align-items:center;
 <!-- CONTACT -->
 <section id="contact" style="padding:7rem 4rem;background:var(--gd);position:relative;overflow:hidden">
   <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(46,173,82,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(46,173,82,.03) 1px,transparent 1px);background-size:56px 56px;pointer-events:none"></div>
-  <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;position:relative">
+  <div class="contact-grid" style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;position:relative">
     <div>
       <div class="sec-label" style="color:#6FCF85">// Get In Touch</div>
       <h2 class="sec-title" style="color:var(--w);margin-bottom:1rem">Have Questions?<br><em style="font-style:italic;color:var(--goldl)">We're Here For You.</em></h2>

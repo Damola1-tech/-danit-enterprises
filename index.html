@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>DANNIT ENTERPRISES — CAC Business Registration</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Outfit:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -309,11 +309,12 @@ footer{background:var(--gd);padding:2.5rem 4rem;display:flex;align-items:center;
 .btn-dl-excel{background:var(--gm);color:#fff;border:none;padding:.9rem 1.75rem;border-radius:2px;font-family:'Outfit',sans-serif;font-size:.88rem;font-weight:600;cursor:pointer;letter-spacing:.04em;transition:all .2s;display:flex;align-items:center;gap:.5rem}
 .btn-dl-excel:hover{background:var(--gd)}
 
+/* ── TABLET (960px) ── */
 @media(max-width:960px){
   nav{padding:1rem 1.5rem}.nav-links{display:none}
   .hero{grid-template-columns:1fr;padding:7rem 1.5rem 3rem}.hr2{display:none}
   .services,.process,.register,.trust,.faq-section,.returns-section{padding:4rem 1.5rem}
-  .svcg{grid-template-columns:1fr}.stw{grid-template-columns:1fr 1fr}
+  .svcg{grid-template-columns:1fr 1fr}.stw{grid-template-columns:1fr 1fr}
   .regw{grid-template-columns:1fr;gap:2rem}.trgrid{grid-template-columns:1fr 1fr}
   .returns-grid{grid-template-columns:1fr;gap:2.5rem}
   footer{flex-direction:column;gap:1.25rem;padding:2rem 1.5rem;text-align:center}
@@ -325,6 +326,110 @@ footer{background:var(--gd);padding:2.5rem 4rem;display:flex;align-items:center;
   .upload-modal{max-width:100%;width:96%}
   .upload-modal-footer{flex-direction:column}
   .modal-action-row{flex-direction:column}
+}
+
+/* ── MOBILE (600px and below) ── */
+@media(max-width:600px){
+  /* NAV — hamburger menu */
+  nav{padding:.9rem 1.2rem;gap:.5rem}
+  .nav-links{display:none}
+  .nav-mobile-toggle{display:flex!important;align-items:center;justify-content:center;background:none;border:1px solid rgba(255,255,255,.25);color:#fff;width:38px;height:38px;cursor:pointer;font-size:1.2rem;border-radius:2px;flex-shrink:0}
+  .nav-mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(13,51,32,.98);z-index:300;flex-direction:column;align-items:center;justify-content:center;gap:2rem}
+  .nav-mobile-menu.open{display:flex}
+  .nav-mobile-menu a{color:#fff;font-size:1.4rem;font-family:'Cormorant Garamond',serif;font-weight:600;text-decoration:none;letter-spacing:.04em}
+  .nav-mobile-menu a:active{color:var(--goldl)}
+  .nav-mobile-close{position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:#fff;font-size:1.8rem;cursor:pointer;line-height:1}
+  .nav-cta{font-size:.75rem;padding:.55rem 1rem}
+
+  /* HERO */
+  .hero{padding:6rem 1.2rem 3rem;min-height:auto}
+  .hero h1{font-size:clamp(2.2rem,9vw,3rem);line-height:1.1}
+  .hero-sub{font-size:.9rem;line-height:1.6}
+  .hact{flex-direction:column;gap:.75rem;align-items:stretch}
+  .bp,.bo{width:100%;text-align:center;padding:.9rem 1rem}
+  .eyebrow{font-size:.65rem}
+
+  /* SECTIONS */
+  .services,.process,.register,.trust,.faq-section,.returns-section{padding:3rem 1.2rem}
+  .sec-title{font-size:clamp(1.6rem,7vw,2.4rem)}
+  .sec-sub{font-size:.88rem}
+
+  /* SERVICES GRID — single column on mobile */
+  .svcg{grid-template-columns:1fr;gap:1rem}
+  .svcc{padding:1.4rem}
+
+  /* PROCESS STEPS — single column */
+  .stw{grid-template-columns:1fr;gap:1rem}
+  .stb{padding:1.4rem}
+
+  /* REGISTRATION FORM */
+  .regw{grid-template-columns:1fr;gap:1.5rem}
+  .type-tabs{gap:.5rem}
+  .type-tab{padding:.6rem .9rem;font-size:.72rem;letter-spacing:.03em}
+  .form-card{padding:1.4rem 1.2rem}
+  .fgr{grid-template-columns:1fr!important}
+  .fgr3{grid-template-columns:1fr!important}
+  .fg input,.fg select,.fg textarea{font-size:16px!important;min-height:48px;padding:.8rem 1rem}
+  .fg textarea{min-height:90px}
+  .fg label{font-size:.78rem}
+  .step-indicator{gap:.3rem}
+  .step-dot{width:7px;height:7px}
+  .fnav{flex-direction:column;gap:.75rem}
+  .fnav button{width:100%;justify-content:center}
+  .bsb{width:100%;padding:1rem;font-size:.9rem}
+
+  /* PEOPLE BLOCKS (directors/partners/trustees) */
+  .person-block{padding:1.2rem!important}
+  .person-block .fgr{grid-template-columns:1fr!important}
+
+  /* TRUST SECTION */
+  .trgrid{grid-template-columns:1fr 1fr;gap:1rem}
+  .trc{padding:1.2rem}
+
+  /* FAQ */
+  .faq-grid{grid-template-columns:1fr}
+  .faq-q{padding:1rem 1.2rem}
+  .faq-at{padding:.8rem 1.2rem 1rem}
+
+  /* ANNUAL RETURNS */
+  .returns-grid{grid-template-columns:1fr}
+  .returns-form-card,.reminder-card{padding:1.4rem 1.2rem}
+  .countdown-display{gap:.5rem}
+  .cd-box{padding:.6rem .8rem;min-width:60px}
+  .cd-num{font-size:1.6rem}
+  .reminder-actions{flex-direction:column;gap:.5rem}
+  .btn-send-reminder,.btn-delete-reminder{width:100%;justify-content:center;text-align:center}
+
+  /* CONTACT */
+  #contact{padding:3rem 1.2rem!important}
+  .contact-grid{grid-template-columns:1fr!important;gap:2rem!important}
+
+  /* FOOTER */
+  footer{flex-direction:column;gap:1rem;padding:1.8rem 1.2rem;text-align:center}
+  .fgr{grid-template-columns:1fr}
+
+  /* SUCCESS MODAL */
+  .modal-box{padding:2rem 1.2rem;margin:1rem;border-radius:4px}
+  .modal-action-row{flex-direction:column;gap:.75rem}
+  .btn-upload-docs{width:100%;justify-content:center}
+  .modal-ref{font-size:.8rem;word-break:break-all}
+
+  /* UPLOAD MODAL */
+  .upload-modal{width:100%;max-width:100%;height:100%;max-height:100%;border-radius:0;margin:0}
+  .upload-modal-overlay{align-items:flex-end}
+  .upload-modal-hdr{padding:1rem 1.2rem}
+  .upload-modal-body{padding:1rem 1.2rem}
+  .upload-modal-footer{padding:1rem 1.2rem;flex-direction:column;gap:.75rem}
+  .drop-zone{padding:1.2rem 1rem}
+  .file-preview{flex-wrap:wrap;gap:.3rem}
+
+  /* CHATBOT */
+  .chat-window{width:calc(100vw - 2rem);right:1rem;bottom:5rem;max-height:70vh}
+  .chat-toggle{right:1rem;bottom:1rem}
+
+  /* SUGGESTION BUTTONS */
+  .chat-suggestions{flex-wrap:wrap;gap:.4rem}
+  .sug-btn{font-size:.72rem;padding:.35rem .7rem}
 }
 </style>
 </head>
@@ -341,7 +446,20 @@ footer{background:var(--gd);padding:2.5rem 4rem;display:flex;align-items:center;
     <li><a href="#contact">Contact</a></li>
   </ul>
   <button class="nav-cta" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})">Start Registration</button>
+  <button class="nav-mobile-toggle" onclick="toggleMobileMenu()" aria-label="Menu" style="display:none">☰</button>
 </nav>
+
+<!-- Mobile fullscreen menu -->
+<div class="nav-mobile-menu" id="mobileMenu">
+  <button class="nav-mobile-close" onclick="toggleMobileMenu()">✕</button>
+  <a href="#services" onclick="toggleMobileMenu()">Services</a>
+  <a href="#process" onclick="toggleMobileMenu()">How It Works</a>
+  <a href="#register" onclick="toggleMobileMenu()">Register</a>
+  <a href="#returns" onclick="toggleMobileMenu()">Annual Returns</a>
+  <a href="#faq" onclick="toggleMobileMenu()">FAQ</a>
+  <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
+  <button class="bp" style="margin-top:1rem;width:220px" onclick="toggleMobileMenu();document.getElementById('register').scrollIntoView({behavior:'smooth'})">Start Registration →</button>
+</div>
 
 <section class="hero">
   <div class="hg"></div><div class="hg2"></div>
@@ -907,6 +1025,21 @@ const EMAIL_2 = 'dannitenterprises@gmail.com';
 const WA_NUMBER = '2347068655350';
 const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyS0kUbN600mZ9iMhYGAxyPKKKoOxZe7C4IdgwTmwR9N158WY5s7we2VAiNZ3rYO2dBeQ/exec';
 emailjs.init(EMAILJS_PUBLIC_KEY);
+
+// ── MOBILE MENU ──────────────────────────────
+window.toggleMobileMenu=function(){
+  const menu=document.getElementById('mobileMenu');
+  menu.classList.toggle('open');
+  document.body.style.overflow=menu.classList.contains('open')?'hidden':'';
+};
+// Show hamburger only on small screens
+(function(){
+  const btn=document.querySelector('.nav-mobile-toggle');
+  if(!btn)return;
+  const mq=window.matchMedia('(max-width:600px)');
+  const update=()=>btn.style.display=mq.matches?'flex':'none';
+  update();mq.addEventListener('change',update);
+})();
 
 // ── STORAGE KEY for reminders ──
 const REMINDERS_KEY = 'dannit_reminders_v1';
